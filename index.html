@@ -86,30 +86,153 @@
         </div>
     </div>
     <div class="tutorial-container">
-        <h1 class="tutorial-title" id="top">Tutorial: Create a React project</h1>
+        <h1 class="tutorial-title" id="top">Tutorial: Create a React project with a form component</h1>
         <div id="step-1" class="step-container">
             <div class="step-content">
-                <h2 class="step-title">Step 1: </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minima architecto culpa vel soluta quaerat necessitatibus perferendis molestias sit suscipit odio nesciunt maiores veritatis temporibus dolorem, tempora iure numquam unde.</p>
-                <span class="code-exemple">--var test</span>
-                <div class="image-container">
-                    <img class="step-image" src="img/bg.png" alt="">
-                    <img class="step-image" src="img/bg.png" alt="">
-                    <img class="step-image" src="img/bg.png" alt="">
-                    <img class="step-image" src="img/bg.png" alt="">
-                    <img class="step-image" src="img/bg.png" alt="">
-                    <img class="step-image" src="img/bg.png" alt="">
-                </div>
+                <h2 class="step-title">Step 1: Install Node.js and npm </h2>
+                <p>Before creating a React project, make sure you have Node.js and npm installed on your system. You can download them from the official <a href="https://nodejs.org/fr">Node.js</a> website.</p>
             </div>
         </div>
 
         <div id="step-2" class="step-container">
             <div class="step-content">
-                <h2 class="step-title">Step 2: </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minima architecto culpa vel soluta quaerat necessitatibus perferendis molestias sit suscipit odio nesciunt maiores veritatis temporibus dolorem, tempora iure numquam unde.</p>
+                <h2 class="step-title">Step 2: Install Create React App </h2>
+                <p>To simplify the process of creating a React project, you can use Create React App, a tool that automatically sets up a React development environment.</p>
+                <p>To install it, open your terminal and run the following command:</p>
+                <span class="code-exemple">npx create-react-app my-react-project</span>
+                <p>Make sure to replace "my-react-project" with the name you want for your project.</p>
             </div>
             <img class="step-image" src="" alt="">
         </div>
+
+        <div id="step-3" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 3: Start the development server </h2>
+                <p>Once the installation is complete, navigate to the project folder and run the following command:</p>
+                <span class="code-exemple">cd my-react-project</span>
+                <br>
+                <span class="code-exemple">npm start</span>
+                <p>This will start the development server and open your project in your default browser.</p>
+            </div>
+            <img class="step-image" src="" alt="">
+        </div>  
+
+        <div id="step-4" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 4: Basic File Structure </h2>
+                <p>Let's take a look at the basic file structure of a React project created with Create React App.</p>
+                <p>First, you have the <b>node_modules</b> folder, which contains all the dependencies of your project.</p>
+                <p>Then, you have the <b>public</b> folder, which contains the <b>index.html</b> file, the <b>favicon.ico</b> file, and the <b>manifest.json</b> file.</p>
+                <p>Finally, you have the <b>src</b> folder, which contains all the source code of your project.</p>
+                <p>For now, we will only focus on the <b>src</b> folder.</p>
+                <div class="image-container">
+                    <img class="step-image" src="img/arborescence-react-app.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="step-5" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 5: The index.js file </h2>
+                <p>Let's start by taking a look at the <b>index.js</b> file.</p>
+                <p>This file is the entry point of your React application. It is responsible for rendering the <b>App</b> component in the <b>root</b> element of the <b>index.html</b> file.</p>
+                <p>By default, the <b>App</b> component is a simple component that displays the React logo and a welcome message.</p>
+                <p>Let's change the welcome message to "Hello World!"</p>
+                <span class="code-exemple">import React from 'react';</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">function App() {</span>
+                <span class="code-exemple">  return (</span>
+                <span class="code-exemple">    &lt;div className="App"&gt;</span>
+                <span class="code-exemple">      &lt;header className="App-header"&gt;</span>
+                <span class="code-exemple">        &lt;img src="logo.svg" className="App-logo" alt="logo" /&gt;</span>
+                <span class="code-exemple">        &lt;p&gt;</span>
+                <span class="code-exemple">          Welcome to React</span>
+                <span class="code-exemple">        &lt;/p&gt;</span>
+                <span class="code-exemple">        &lt;a</span>
+                <span class="code-exemple">          className="App-link"</span>
+                <span class="code-exemple">          href="https://reactjs.org"</span>
+                <span class="code-exemple">          target="_blank"</span>
+                <span class="code-exemple">          rel="noopener noreferrer"</span>
+                <span class="code-exemple">        &gt;</span>
+                <span class="code-exemple">          Learn React</span>
+                <span class="code-exemple">        &lt;/a&gt;</span>
+                <span class="code-exemple">      &lt;/header&gt;</span>
+                <span class="code-exemple">    &lt;/div&gt;</span>
+                <span class="code-exemple">  );</span>
+                <span class="code-exemple">}</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">export default App;</span>
+                
+            </div>
+        </div>
+
+        <div id="step-6" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 6: Understanding React Components </h2>
+                <p>React is a component-based library. This means that you can create components and reuse them throughout your application.</p>
+                <p>There are two types of components in React: <b>functional components</b> and <b>class components</b>.</p>
+                <p>Functional components are simple functions that take props as arguments and return a React element.</p>
+                <p>Class components are more complex components that can have state and lifecycle methods.</p>
+                <p>For now, we will only focus on functional components.</p>
+                <p>Let's create a new component called <b>Form</b> and display it in the <b>App</b> component.</p>
+            </div>
+        </div>
+
+        <div id="step-7" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 7: The Form component </h2>
+                <p>Now that we have created the <b>Form</b> component, let's create the <b>Form.js</b> file in the <b>src</b> folder.</p>
+                <p>Then, let's create a functional component called <b>Form</b> and export it.</p>
+                <span class="code-exemple">import React from 'react';</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">function Form() {</span>
+                <span class="code-exemple">  return (</span>
+                <span class="code-exemple">    &lt;div&gt;</span>
+                <span class="code-exemple">      &lt;h1&gt;Form&lt;/h1&gt;</span>
+                <span class="code-exemple">    &lt;/div&gt;</span>
+                <span class="code-exemple">  );</span>
+                <span class="code-exemple">}</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">export default Form;</span>
+            </div>
+        </div>
+
+        <div id="step-8" class="step-container">
+            <div class="step-content">
+                <h2>Step 8: Display the Form component in the App component </h2>
+                <p>Now that we have created the <b>Form</b> component, let's display it in the <b>App</b> component.</p>
+                <p>To do this, we need to import the <b>Form</b> component in the <b>App</b> component and display it in the <b>return</b> statement like this.</p>
+                <span class="code-exemple">import React from 'react';</span>
+                <span class="code-exemple">import Form from './Form';</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">function App() {</span>
+                <span class="code-exemple">  return (</span>
+                <span class="code-exemple">    &lt;div className="App"&gt;</span>
+                <span class="code-exemple">      &lt;header className="App-header"&gt;</span>
+                <span class="code-exemple">        &lt;img src="logo.svg" className="App-logo" alt="logo" /&gt;</span>
+                <span class="code-exemple">        &lt;p&gt;</span>
+                <span class="code-exemple">          Welcome to React</span>
+                <span class="code-exemple">        &lt;/p&gt;</span>
+                <span class="code-exemple">        &lt;a</span>
+                <span class="code-exemple">          className="App-link"</span>
+                <span class="code-exemple">          href="https://reactjs.org"</span>
+                <span class="code-exemple">          target="_blank"</span>
+                <span class="code-exemple">          rel="noopener noreferrer"</span>
+                <span class="code-exemple">        &gt;</span>
+                <span class="code-exemple">          Learn React</span>
+                <span class="code-exemple">        &lt;/a&gt;</span>
+                <span class="code-exemple">      &lt;/header&gt;</span>
+                <span class="code-exemple">      &lt;Form /&gt;</span>
+                <span class="code-exemple">    &lt;/div&gt;</span>
+                <span class="code-exemple">  );</span>
+                <span class="code-exemple">}</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">export default App;</span>
+            </div>
+        </div>
+
+    
+
         <a href="#top" class="arrow-top"><img src="data:image/png;base64,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"/></a>
     </div>
 </body>

@@ -22,6 +22,23 @@ body {
     background-color: var(--color-quinary);
 }
 
+a {
+    color: var(--color-primary);
+}
+
+b {
+    font-weight: 800;
+    color: black;
+    border-radius: 1rem;
+    padding: 0 1rem;
+}
+
+br {
+    display: block;
+    margin: 0.5rem 0;
+    content: "";
+}
+
 .tutorial-container {
     display: flex;
     flex-direction: column;
@@ -34,6 +51,7 @@ body {
 
 .tutorial-title {
     padding: 2rem 0;
+    text-align: center;
     font-size: calc(1.2rem + 1.2vw);
 }
 
@@ -42,13 +60,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .step-content {
     display: flex;
     flex-direction: column;
     width: 85%;
-    padding: 2rem 8rem 3rem 8em;
+    padding: 2rem 15rem 3rem 15em;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(158, 158, 158, 0.37);
     backdrop-filter: blur( 4px );
@@ -63,8 +82,9 @@ body {
 }
 
 .step-content p {
-    font-size: calc(0.5rem + 0.5vw);
+    font-size: calc(0.6rem + 0.6vw);
     text-align: justify;
+    margin: 0.5rem 0;
 }
 
 .image-container {
@@ -76,7 +96,7 @@ body {
 }
 
 .step-image {
-    width: calc(33% - 1rem);
+    width: calc(50% - 1rem);
     margin: 1rem 1rem 1rem 0;
     border-radius: 5px;
 }
@@ -85,10 +105,10 @@ body {
     width: fit-content;
     background-color: var(--color-quaternary);
     color: var(--color-quinary);
-    padding: 0.8rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    font-size: calc(0.5rem + 0.5vw);
+    padding: 0.2rem 0.8rem;
+    font-size: calc(0.6rem + 0.6vw);
+    width: 80%;
+    white-space:break-spaces;
 }
 
 /* navbar */
@@ -130,7 +150,7 @@ body {
 
 .nav-item a {
     color: var(--color-quinary);
-    font-size: calc(0.5rem + 0.5vw);
+    font-size: calc(0.6rem + 0.6vw);
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -160,3 +180,16 @@ body {
     transform: translateX(50%) scale(1.1);
 }
 
+@media screen and (max-width: 768px) {
+    .nav-container {
+        display: none;
+    }
+
+    .step-content {
+        padding: 2rem 2rem 3rem 2rem;
+    }
+
+    .step-image {
+        width: 100%;
+    }
+}
