@@ -10,6 +10,12 @@
     <div class="nav-container">
         <a class="nav-title" href="#top"><img src="img/logo.png" alt=""></a>
         <div class="nav-item">
+            <a href="#prerequisites">Prerequisites</a>
+        </div>
+        <div class="nav-item">
+            <a href="#step-0">Step 0</a>
+        </div>
+        <div class="nav-item">
             <a href="#step-1">Step 1</a>
         </div>
         <div class="nav-item">
@@ -87,10 +93,41 @@
     </div>
     <div class="tutorial-container">
         <h1 class="tutorial-title" id="top">Tutorial: Create a React project with a form component</h1>
+
+        <div id="prerequisites" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Prerequisites</h2>
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABiElEQVRIS72VfVHEQAzF7xyAAoqCAwWAA1DAOQAcgAJAAaAAcHAogHNwOMABvB+TdLK97gd/lMxk2t1m30te03Q+m9jmE+PPWgiWSuJIfmBOTh/mL7q+lpIsEZzq4K28q1S50fMrOWRbliO4U+SFRX/qynplWbNNNcfyS/mexREDUWJjBBGcA6xLBgmVYvdG2scPCZDl2Z4ehowrHL8VvVvQma69XEOCjZWcy/zbQMYq90rA2PeMYuBSmw9yNO8yKZcIOOIJ9lVEgkcFnMtLutcIvIon4ZBw8h3Q2wt5Sfsagb8LsMBJCGqHifeYXd1/tcgYJWoh8Cq5nmRIEpxI0CLRjkBXJuUYiUu0Vgz3iUQtL5kzkeRG6+sgVfEl+0dGq/V9nNEZEsAiOKGcZXSMtmkMaBkRQ27PPvmO/n1UkFUcdmTFACvZn4adA0USdGX9JqdzMDqEnxDgne1tTVL2az8cgH3e56pAc4j6CRoDW36ZdBdO1owSjD6nGkBHgZ2khSCXedP+5AQ/UiNdGXXpJcYAAAAASUVORK5CYII="/> ~30/45 minutes.</p>
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABR0lEQVRIS7VVixHBQBBNKkAHVIAKUAEqEBWgAlRAB6IDHaADKqAEKuC9zF3m5tzl7iTZmR3JWu/tXxzVLHHN+FEowQ0BfaB938BCCBKAHgTwHJ+pD0kIwQWAAwHK51GVBEOAnTVAEpCoUHwzYDlmGtIR7yxbaYI2EB4WlA7szyIGNYMJHLtQAlIpTWjPESQn6yV8SEa9Q0+0qQQcvyolw1YJErzLMSxLlI+x3uSyJG9EtoSmMkLTFP1LQvAhlD3JxTamoSRGcL0Het33MCw8m2FduqJFuwBcngYXzwoODOhHighCxvYq6u9NwGbpt8eVRQsOcuGcTeao7QyIW2FbG76bwpZtryq2EtFxrDhy9ROoHEGejxTK0yLFePxsBEy1IX7JqDeW+tAus3nimcfPKwMZqRq1hSM7hsyG8nMYff8PbOBOe+0EXxeJNRkmAuuOAAAAAElFTkSuQmCC"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABmUlEQVRIS7WUgU0DMQxF2wmgE1AmACbgmACYgOsEwAQtEwATcJ0ANqBsABP0NgAmgP+q5GSFJCSCWvpKLor/t3O2x6Mt23jL/KNagVcF9CUclQZWI9CK9MERz7R2JSI1AisRHjtS9if/KdCI7NkRfmrdcQIIZa00A57jwjHdaJ0LS4Fn+7PAVAxrwzLR/t1972vtcwo2gzNdPBAgBNiucBgQ4GMzorI+3B3EwJvwxJkVoPxKDB8CsFnF/DbcVqDVty/DnFD438iQTO8EXgAbyji8XCIS+kB+K+BLhV0JnY8wVkW/iVgfyClfsoC8Efgng6XKNCdifSDjWaLkqOT6gDe9tNG4vfXpdbYn0NWryN2sAA5+NKSy5q1pwGuBgH5YLoNU2fIsVAkrvfMovAhNjQCX/eyJ+XG2EO4F39V0uG+4wSeVAaVG6YXGHMKYRRhZUElT4VzYdK+1lAAXT81FWr91hBxTlp3gG4uz6PBLCZAqIxkj6kUYmfvm3GfTa8/wK8rAN4uNOqExZOMzKxJIkVWf58q0mizm8A35/0YZV/UdAAAAAABJRU5ErkJggg=="/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABpUlEQVRIS7WVgTXEQBCG7ypABe4qQAWiAlQgKkAFTgWoQFRAB+46oALpABXwf3k790bsrs0j897/kuxt/v+fyczedDJyTEfmnwwVeJahT2Gv1NgQgVqkd4H4VNemRGSIwFKE+4GU+4P/FKhE9iR8BNKNIIBQNkozoBwnwlVgu9T1XqBsfxaYieE1sGyF61u4znVtcwo+gyNt3BEgBMSmsBvuvWPLiJ/orPewBzHwIjyy5gVov1RQe4TMLQYg5lukouP2ArWerQ1xi0ucQZQLhMn0RqACxLqN+x/Zi5T2OuTXAu+S6Xkw1ynFusiL4OoiYx9y2pcsIK/6GafatDQTykdZouSpDMww7s8Een+RyKLV+rbAVC9je3KDxgscDcdC13KRaLTGAFJGDP2InIC1LcNFN1Fnf9hRHmbnQVgJ1RABNvPxGBiIFwLHgw/WbgWbajPybVMqA1qN1rMZsGn2ZxFE/E4nzYRoKVMC1PzQWSGTuifY6NkGi63Rwy8lQM3tGMh1kS9dq3c4/IpKZKXxrvvv2jPlIxvCSrneW/p/kCL/dX10gS+qoFUZdWSXlgAAAABJRU5ErkJggg=="/> Medium difficulty.</p>
+                <p>If you want to go faster by ignoring non-essential information, only follow the <i class="essential">pink color rules.</i></p>
+                <p>Before starting this tutorial, a basic knowledge of HTML, CSS, and JavaScript is a plus.</p>
+                <div class="image-container">
+                    <img class="step-image" src="img/logo-languages.png" alt="">
+                </div>
+                <p>You must have an IDE, for example <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.</p>
+                <div class="image-container">
+                    <img class="step-image" src="img/vscode.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="step-0" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 0: What is React </h2>
+                <p>React, also known as React.js or ReactJS, is an open-source JavaScript library for building user interfaces. It was developed by Facebook and is commonly used for creating dynamic and interactive web applications. React is particularly well-suited for building single-page applications and is often used in conjunction with other libraries and frameworks, such as Redux for state management.</p>
+                <div class="image-container">
+                    <img class="step-image" src="img/react.png" alt="">
+                </div>
+            </div>
+        </div>
+
         <div id="step-1" class="step-container">
             <div class="step-content">
                 <h2 class="step-title">Step 1: Install Node.js and npm </h2>
-                <p>Before creating a React project, make sure you have Node.js and npm installed on your system. You can download them from the official <a href="https://nodejs.org/fr" target="_blank">Node.js</a> website.</p>
+                <p>Before creating a React project, make sure <i class="essential">you have Node.js and npm installed on your system.</i> You can download them from the official <a href="https://nodejs.org/en" target="_blank">Node.js</a> website.</p>
+                <div class="image-container">
+                    <img class="step-image" src="img/node.png" alt="">
+                </div>
             </div>
         </div>
 
@@ -98,7 +135,7 @@
             <div class="step-content">
                 <h2 class="step-title">Step 2: Install Create React App </h2>
                 <p>To simplify the process of creating a React project, you can use Create React App, a tool that automatically sets up a React development environment.</p>
-                <p>To install it, open your terminal and run the following command:</p>
+                <p>To install it, <i class="essential">open your terminal and run the following command:</i></p>
                 <span class="code-exemple">npx create-react-app my-react-project</span>
                 <p>Make sure to replace "my-react-project" with the name you want for your project.</p>
             </div>
@@ -108,7 +145,7 @@
         <div id="step-3" class="step-container">
             <div class="step-content">
                 <h2 class="step-title">Step 3: Start the development server </h2>
-                <p>Once the installation is complete, navigate to the project folder and run the following command:</p>
+                <p>Once the installation is complete, <i class="essential">navigate to the project folder and run the following command:</i></p>
                 <span class="code-exemple">cd my-react-project</span>
                 <br>
                 <span class="code-exemple">npm start</span>
@@ -181,8 +218,8 @@
         <div id="step-7" class="step-container">
             <div class="step-content">
                 <h2 class="step-title">Step 7: The Form component </h2>
-                <p>Now that we have created the <b>Form</b> component, let's create the <b>Form.js</b> file in the <b>src</b> folder.</p>
-                <p>Then, let's create a functional component called <b>Form</b> and export it.</p>
+                <i class="essential"><p>Let's create the <b>Form.jsx</b> file in the <b>src</b> folder.</p>
+                <p>Then, in the <b>Form.jsx</b> files, create a functional component called <b>Form</b> and export it.</p></i>
                 <span class="code-exemple">import React from 'react';</span>
                 <span class="code-exemple"></span>
                 <span class="code-exemple">function Form() {</span>
@@ -199,20 +236,81 @@
 
         <div id="step-8" class="step-container">
             <div class="step-content">
-                <h2>Step 8: Display the Form component in the App component </h2>
+                <h2 class="step-title">Step 8: Complete the Form file</h2>
+                <p><i class="essential">Here's a simple example of a form component with two inputs and a submit button. You can replace the return statement in <b>Form.jsx</b> files with this:</i></p>
+                <span class="code-exemple">&lt;form onSubmit={handleFormSubmit}&gt;</span>
+                <span class="code-exemple">     &lt;div&gt;</span>
+                <span class="code-exemple">         &lt;label&gt;Name:&lt;/label&gt;</span>
+                <span class="code-exemple">         &lt;input</span>
+                <span class="code-exemple">         type="text"</span>
+                <span class="code-exemple">         name="name"</span>
+                <span class="code-exemple">         value={formData.name}</span>
+                <span class="code-exemple">         onChange={handleInputChange}</span>
+                <span class="code-exemple">         /&gt;</span>
+                <span class="code-exemple">     &lt;/div&gt;</span>
+                <span class="code-exemple">     &lt;div&gt;</span>
+                <span class="code-exemple">         &lt;label&gt;Email:&lt;/label&gt;</span>
+                <span class="code-exemple">         &lt;input</span>
+                <span class="code-exemple">         type="email"</span>
+                <span class="code-exemple">         name="email"</span>
+                <span class="code-exemple">         value={formData.email}</span>
+                <span class="code-exemple">         onChange={handleInputChange}</span>
+                <span class="code-exemple">         /&gt;</span>
+                <span class="code-exemple">     &lt;/div&gt;</span>
+                <span class="code-exemple"> &lt;button type="submit"&gt;Submit&lt;/button&gt;</span>
+                <span class="code-exemple">&lt;/form&gt;</span>
+                
+            </div>
+        </div>
+
+        <div id="step-9" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 9: Add a callback function</h2>
+                <p><i class="essential">Still in the <b>Form.jsx</b> file, add this before the return. This will allow you to call a callback function when you send the form.</i></p>
+                <span class="code-exemple">import React, { useState } from 'react';</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">function Form({ onSubmit }) {</span>
+                <span class="code-exemple">  const [formData, setFormData] = useState({</span>
+                <span class="code-exemple">    // Initialize your form fields here</span>
+                <span class="code-exemple">    name: " ",</span>
+                <span class="code-exemple">    email: " ",</span>
+                <span class="code-exemple">  });</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">  const handleFormSubmit = (e) => {</span>
+                <span class="code-exemple">    e.preventDefault();</span>
+                <span class="code-exemple">    // Perform any form data validation here</span>
+                <span class="code-exemple">    onSubmit(formData); // Call the callback function with form data</span>
+                <span class="code-exemple">  };</span>
+                <span class="code-exemple"></span>
+                <span class="code-exemple">  const handleInputChange = (e) => {</span>
+                <span class="code-exemple">    const { name, value } = e.target;</span>
+                <span class="code-exemple">    setFormData({ ...formData, [name]: value });</span>
+                <span class="code-exemple">  };</span>
+                <span class="code-exemple">}</span>
+
+            </div>
+        </div>
+
+        <div id="step-10" class="step-container">
+            <div class="step-content">
+                <h2 class="step-title">Step 10: Display the Form component in the App component </h2>
                 <p>Now that we have created the <b>Form</b> component, let's display it in the <b>App</b> component.</p>
-                <p>To do this, we need to import the <b>Form</b> component in the <b>App</b> component and display it in the <b>return</b> statement like this.</p>
+                <p>To do this, <i class="essential">we need to import the <b>Form</b> component in the <b>App</b> component and display it in the <b>return</b> statement like this.</i></p>
                 <span class="code-exemple">import React from 'react';</span>
                 <span class="code-exemple">import Form from './Form';</span>
                 <span class="code-exemple"></span>
                 <span class="code-exemple">function App() {</span>
+                <span class="code-exemple">  // Define a callback function to handle form submission</span>
+                <span class="code-exemple">  const handleFormSubmit = (formData) => {</span>
+                <span class="code-exemple">    // Do something with the form data, e.g., send it to a server</span>
+                <span class="code-exemple">    console.log('Form data submitted:', formData);</span>
+                <span class="code-exemple">  };</span>
+                <span class="code-exemple"></span>
                 <span class="code-exemple">  return (</span>
                 <span class="code-exemple">    &lt;div className="App"&gt;</span>
                 <span class="code-exemple">      &lt;header className="App-header"&gt;</span>
                 <span class="code-exemple">        &lt;img src="logo.svg" className="App-logo" alt="logo" /&gt;</span>
-                <span class="code-exemple">        &lt;p&gt;</span>
-                <span class="code-exemple">          Welcome to React</span>
-                <span class="code-exemple">        &lt;/p&gt;</span>
+                <span class="code-exemple">        &lt;p&gt;Welcome to React&lt;/p&gt;</span>
                 <span class="code-exemple">        &lt;a</span>
                 <span class="code-exemple">          className="App-link"</span>
                 <span class="code-exemple">          href="https://reactjs.org"</span>
@@ -222,11 +320,10 @@
                 <span class="code-exemple">          Learn React</span>
                 <span class="code-exemple">        &lt;/a&gt;</span>
                 <span class="code-exemple">      &lt;/header&gt;</span>
-                <span class="code-exemple">      &lt;Form /&gt;</span>
+                <span class="code-exemple">      &lt;Form onSubmit={handleFormSubmit} /&gt; {/* Pass the callback function to the Form component */}</span>
                 <span class="code-exemple">    &lt;/div&gt;</span>
                 <span class="code-exemple">  );</span>
-                <span class="code-exemple">}</span>
-                <span class="code-exemple"></span>
+                <span class="code-exemple" /> </span>
                 <span class="code-exemple">export default App;</span>
             </div>
         </div>

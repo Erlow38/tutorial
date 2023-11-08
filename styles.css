@@ -180,6 +180,12 @@ br {
     transform: translateX(50%) scale(1.1);
 }
 
+.essential {
+    color: var(--color-tertiary);
+    font-size: calc(0.6rem + 0.6vw);
+    font-style: normal;
+}
+
 @media screen and (max-width: 768px) {
     .nav-container {
         display: none;
@@ -194,5 +200,8 @@ br {
     }
     .arrow-top {
         right: 50%;
+    }
+    .tutorial-title {
+        padding: 1rem;
     }
 }
