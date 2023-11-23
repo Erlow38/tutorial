@@ -13,46 +13,46 @@
             <a href="#prerequisites">Prerequisites</a>
         </div>
         <div class="nav-item">
-            <a href="#step-0">Step 0</a>
+            <a href="#step-0">What is React</a>
         </div>
         <div class="nav-item">
-            <a href="#step-1">Step 1</a>
+            <a href="#step-1">Install Node.js and npm</a>
         </div>
         <div class="nav-item">
-            <a href="#step-2">Step 2</a>
+            <a href="#step-2">Install Create React App</a>
         </div>
         <div class="nav-item">
-            <a href="#step-3">Step 3</a>
+            <a href="#step-3">Start the development server</a>
         </div>
         <div class="nav-item">
-            <a href="#step-4">Step 4</a>
+            <a href="#step-4">Basic File Structure</a>
         </div>
         <div class="nav-item">
-            <a href="#step-5">Step 5</a>
+            <a href="#step-5">The index.js file</a>
         </div>
         <div class="nav-item">
-            <a href="#step-6">Step 6</a>
+            <a href="#step-6">Understanding React Components</a>
         </div>
         <div class="nav-item">
-            <a href="#step-7">Step 7</a>
+            <a href="#step-7">The Form component</a>
         </div>
         <div class="nav-item">
-            <a href="#step-8">Step 8</a>
+            <a href="#step-8">Complete the Form file</a>
         </div>
         <div class="nav-item">
-            <a href="#step-9">Step 9</a>
+            <a href="#step-9">Add a callback function</a>
         </div>
         <div class="nav-item">
-            <a href="#step-10">Step 10</a>
+            <a href="#step-10">Adding style</a>
         </div>
         <div class="nav-item">
-            <a href="#step-11">Step 11</a>
+            <a href="#step-11">Add the Form component in the App component</a>
         </div>
         <div class="nav-item">
-            <a href="#step-12">Step 12</a>
+            <a href="#step-12">Add a button for display the form</a>
         </div>
         <div class="nav-item">
-            <a href="#step-13">Step 13</a>
+            <a href="#step-13">Congratulations</a>
         </div>
         <div class="nav-item">
             <a href="#contact">Contact</a>
@@ -64,8 +64,8 @@
         <div id="prerequisites" class="step-container">
             <div class="step-content">
                 <h2 class="step-title">Prerequisites</h2>
-                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABiElEQVRIS72VfVHEQAzF7xyAAoqCAwWAA1DAOQAcgAJAAaAAcHAogHNwOMABvB+TdLK97gd/lMxk2t1m30te03Q+m9jmE+PPWgiWSuJIfmBOTh/mL7q+lpIsEZzq4K28q1S50fMrOWRbliO4U+SFRX/qynplWbNNNcfyS/mexREDUWJjBBGcA6xLBgmVYvdG2scPCZDl2Z4ehowrHL8VvVvQma69XEOCjZWcy/zbQMYq90rA2PeMYuBSmw9yNO8yKZcIOOIJ9lVEgkcFnMtLutcIvIon4ZBw8h3Q2wt5Sfsagb8LsMBJCGqHifeYXd1/tcgYJWoh8Cq5nmRIEpxI0CLRjkBXJuUYiUu0Vgz3iUQtL5kzkeRG6+sgVfEl+0dGq/V9nNEZEsAiOKGcZXSMtmkMaBkRQ27PPvmO/n1UkFUcdmTFACvZn4adA0USdGX9JqdzMDqEnxDgne1tTVL2az8cgH3e56pAc4j6CRoDW36ZdBdO1owSjD6nGkBHgZ2khSCXedP+5AQ/UiNdGXXpJcYAAAAASUVORK5CYII="/> ~30/45 minutes.</p>
-                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABR0lEQVRIS7VVixHBQBBNKkAHVIAKUAEqEBWgAlRAB6IDHaADKqAEKuC9zF3m5tzl7iTZmR3JWu/tXxzVLHHN+FEowQ0BfaB938BCCBKAHgTwHJ+pD0kIwQWAAwHK51GVBEOAnTVAEpCoUHwzYDlmGtIR7yxbaYI2EB4WlA7szyIGNYMJHLtQAlIpTWjPESQn6yV8SEa9Q0+0qQQcvyolw1YJErzLMSxLlI+x3uSyJG9EtoSmMkLTFP1LQvAhlD3JxTamoSRGcL0Het33MCw8m2FduqJFuwBcngYXzwoODOhHighCxvYq6u9NwGbpt8eVRQsOcuGcTeao7QyIW2FbG76bwpZtryq2EtFxrDhy9ROoHEGejxTK0yLFePxsBEy1IX7JqDeW+tAus3nimcfPKwMZqRq1hSM7hsyG8nMYff8PbOBOe+0EXxeJNRkmAuuOAAAAAElFTkSuQmCC"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABmUlEQVRIS7WUgU0DMQxF2wmgE1AmACbgmACYgOsEwAQtEwATcJ0ANqBsABP0NgAmgP+q5GSFJCSCWvpKLor/t3O2x6Mt23jL/KNagVcF9CUclQZWI9CK9MERz7R2JSI1AisRHjtS9if/KdCI7NkRfmrdcQIIZa00A57jwjHdaJ0LS4Fn+7PAVAxrwzLR/t1972vtcwo2gzNdPBAgBNiucBgQ4GMzorI+3B3EwJvwxJkVoPxKDB8CsFnF/DbcVqDVty/DnFD438iQTO8EXgAbyji8XCIS+kB+K+BLhV0JnY8wVkW/iVgfyClfsoC8Efgng6XKNCdifSDjWaLkqOT6gDe9tNG4vfXpdbYn0NWryN2sAA5+NKSy5q1pwGuBgH5YLoNU2fIsVAkrvfMovAhNjQCX/eyJ+XG2EO4F39V0uG+4wSeVAaVG6YXGHMKYRRhZUElT4VzYdK+1lAAXT81FWr91hBxTlp3gG4uz6PBLCZAqIxkj6kUYmfvm3GfTa8/wK8rAN4uNOqExZOMzKxJIkVWf58q0mizm8A35/0YZV/UdAAAAAABJRU5ErkJggg=="/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABpUlEQVRIS7WVgTXEQBCG7ypABe4qQAWiAlQgKkAFTgWoQFRAB+46oALpABXwf3k790bsrs0j897/kuxt/v+fyczedDJyTEfmnwwVeJahT2Gv1NgQgVqkd4H4VNemRGSIwFKE+4GU+4P/FKhE9iR8BNKNIIBQNkozoBwnwlVgu9T1XqBsfxaYieE1sGyF61u4znVtcwo+gyNt3BEgBMSmsBvuvWPLiJ/orPewBzHwIjyy5gVov1RQe4TMLQYg5lukouP2ArWerQ1xi0ucQZQLhMn0RqACxLqN+x/Zi5T2OuTXAu+S6Xkw1ynFusiL4OoiYx9y2pcsIK/6GafatDQTykdZouSpDMww7s8Een+RyKLV+rbAVC9je3KDxgscDcdC13KRaLTGAFJGDP2InIC1LcNFN1Fnf9hRHmbnQVgJ1RABNvPxGBiIFwLHgw/WbgWbajPybVMqA1qN1rMZsGn2ZxFE/E4nzYRoKVMC1PzQWSGTuifY6NkGi63Rwy8lQM3tGMh1kS9dq3c4/IpKZKXxrvvv2jPlIxvCSrneW/p/kCL/dX10gS+qoFUZdWSXlgAAAABJRU5ErkJggg=="/> Medium difficulty.</p>
+                <p>Time: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABiElEQVRIS72VfVHEQAzF7xyAAoqCAwWAA1DAOQAcgAJAAaAAcHAogHNwOMABvB+TdLK97gd/lMxk2t1m30te03Q+m9jmE+PPWgiWSuJIfmBOTh/mL7q+lpIsEZzq4K28q1S50fMrOWRbliO4U+SFRX/qynplWbNNNcfyS/mexREDUWJjBBGcA6xLBgmVYvdG2scPCZDl2Z4ehowrHL8VvVvQma69XEOCjZWcy/zbQMYq90rA2PeMYuBSmw9yNO8yKZcIOOIJ9lVEgkcFnMtLutcIvIon4ZBw8h3Q2wt5Sfsagb8LsMBJCGqHifeYXd1/tcgYJWoh8Cq5nmRIEpxI0CLRjkBXJuUYiUu0Vgz3iUQtL5kzkeRG6+sgVfEl+0dGq/V9nNEZEsAiOKGcZXSMtmkMaBkRQ27PPvmO/n1UkFUcdmTFACvZn4adA0USdGX9JqdzMDqEnxDgne1tTVL2az8cgH3e56pAc4j6CRoDW36ZdBdO1owSjD6nGkBHgZ2khSCXedP+5AQ/UiNdGXXpJcYAAAAASUVORK5CYII="/> ~30/45 minutes.</p>
+                <p>Difficulty: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABR0lEQVRIS7VVixHBQBBNKkAHVIAKUAEqEBWgAlRAB6IDHaADKqAEKuC9zF3m5tzl7iTZmR3JWu/tXxzVLHHN+FEowQ0BfaB938BCCBKAHgTwHJ+pD0kIwQWAAwHK51GVBEOAnTVAEpCoUHwzYDlmGtIR7yxbaYI2EB4WlA7szyIGNYMJHLtQAlIpTWjPESQn6yV8SEa9Q0+0qQQcvyolw1YJErzLMSxLlI+x3uSyJG9EtoSmMkLTFP1LQvAhlD3JxTamoSRGcL0Het33MCw8m2FduqJFuwBcngYXzwoODOhHighCxvYq6u9NwGbpt8eVRQsOcuGcTeao7QyIW2FbG76bwpZtryq2EtFxrDhy9ROoHEGejxTK0yLFePxsBEy1IX7JqDeW+tAus3nimcfPKwMZqRq1hSM7hsyG8nMYff8PbOBOe+0EXxeJNRkmAuuOAAAAAElFTkSuQmCC"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABmUlEQVRIS7WUgU0DMQxF2wmgE1AmACbgmACYgOsEwAQtEwATcJ0ANqBsABP0NgAmgP+q5GSFJCSCWvpKLor/t3O2x6Mt23jL/KNagVcF9CUclQZWI9CK9MERz7R2JSI1AisRHjtS9if/KdCI7NkRfmrdcQIIZa00A57jwjHdaJ0LS4Fn+7PAVAxrwzLR/t1972vtcwo2gzNdPBAgBNiucBgQ4GMzorI+3B3EwJvwxJkVoPxKDB8CsFnF/DbcVqDVty/DnFD438iQTO8EXgAbyji8XCIS+kB+K+BLhV0JnY8wVkW/iVgfyClfsoC8Efgng6XKNCdifSDjWaLkqOT6gDe9tNG4vfXpdbYn0NWryN2sAA5+NKSy5q1pwGuBgH5YLoNU2fIsVAkrvfMovAhNjQCX/eyJ+XG2EO4F39V0uG+4wSeVAaVG6YXGHMKYRRhZUElT4VzYdK+1lAAXT81FWr91hBxTlp3gG4uz6PBLCZAqIxkj6kUYmfvm3GfTa8/wK8rAN4uNOqExZOMzKxJIkVWf58q0mizm8A35/0YZV/UdAAAAAABJRU5ErkJggg=="/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABpUlEQVRIS7WVgTXEQBCG7ypABe4qQAWiAlQgKkAFTgWoQFRAB+46oALpABXwf3k790bsrs0j897/kuxt/v+fyczedDJyTEfmnwwVeJahT2Gv1NgQgVqkd4H4VNemRGSIwFKE+4GU+4P/FKhE9iR8BNKNIIBQNkozoBwnwlVgu9T1XqBsfxaYieE1sGyF61u4znVtcwo+gyNt3BEgBMSmsBvuvWPLiJ/orPewBzHwIjyy5gVov1RQe4TMLQYg5lukouP2ArWerQ1xi0ucQZQLhMn0RqACxLqN+x/Zi5T2OuTXAu+S6Xkw1ynFusiL4OoiYx9y2pcsIK/6GafatDQTykdZouSpDMww7s8Een+RyKLV+rbAVC9je3KDxgscDcdC13KRaLTGAFJGDP2InIC1LcNFN1Fnf9hRHmbnQVgJ1RABNvPxGBiIFwLHgw/WbgWbajPybVMqA1qN1rMZsGn2ZxFE/E4nzYRoKVMC1PzQWSGTuifY6NkGi63Rwy8lQM3tGMh1kS9dq3c4/IpKZKXxrvvv2jPlIxvCSrneW/p/kCL/dX10gS+qoFUZdWSXlgAAAABJRU5ErkJggg=="/> medium.</p>
                 <p>If you want to go faster by ignoring non-essential information, only follow the <i class="essential">pink color instructions.</i></p>
                 <p>Before starting this tutorial, a basic knowledge of HTML, CSS, and JavaScript is a plus.</p>
                 <div class="image-container">
@@ -355,7 +355,7 @@
 
         <div id="step-13" class="step-container">
             <div class="step-content">
-                <h2 class="step-title">Step 13: Congratulation!</h2>
+                <h2 class="step-title">Step 13: Congratulations!</h2>
                 <p>Congratulations! You have successfully created your first <b>React</b> application whith a beautiful form.</p>
             </div>
         </div>
